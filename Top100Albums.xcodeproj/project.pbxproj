@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		B24542FD24B132670015E403 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24542FC24B132670015E403 /* AppDelegate.swift */; };
-		B24542FF24B132670015E403 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24542FE24B132670015E403 /* SceneDelegate.swift */; };
 		B245430124B132670015E403 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B245430024B132670015E403 /* ViewController.swift */; };
 		B245430424B132670015E403 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B245430224B132670015E403 /* Main.storyboard */; };
 		B245430624B1326F0015E403 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B245430524B1326F0015E403 /* Assets.xcassets */; };
 		B245430924B1326F0015E403 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B245430724B1326F0015E403 /* LaunchScreen.storyboard */; };
 		B245431424B1326F0015E403 /* Top100AlbumsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B245431324B1326F0015E403 /* Top100AlbumsTests.swift */; };
+		B245432024B134270015E403 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = B245431F24B134270015E403 /* Album.swift */; };
+		B245432224B134AC0015E403 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = B245432124B134AC0015E403 /* Genre.swift */; };
+		B245432424B135050015E403 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = B245432324B135050015E403 /* Feed.swift */; };
+		B245432624B135A10015E403 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = B245432524B135A10015E403 /* Author.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +32,6 @@
 /* Begin PBXFileReference section */
 		B24542F924B132670015E403 /* Top100Albums.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Top100Albums.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B24542FC24B132670015E403 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B24542FE24B132670015E403 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B245430024B132670015E403 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B245430324B132670015E403 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B245430524B1326F0015E403 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,6 +40,10 @@
 		B245430F24B1326F0015E403 /* Top100AlbumsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Top100AlbumsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B245431324B1326F0015E403 /* Top100AlbumsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Top100AlbumsTests.swift; sourceTree = "<group>"; };
 		B245431524B1326F0015E403 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B245431F24B134270015E403 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		B245432124B134AC0015E403 /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
+		B245432324B135050015E403 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
+		B245432524B135A10015E403 /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +85,8 @@
 		B24542FB24B132670015E403 /* Top100Albums */ = {
 			isa = PBXGroup;
 			children = (
+				B245431E24B134170015E403 /* Model */,
 				B24542FC24B132670015E403 /* AppDelegate.swift */,
-				B24542FE24B132670015E403 /* SceneDelegate.swift */,
 				B245430024B132670015E403 /* ViewController.swift */,
 				B245430224B132670015E403 /* Main.storyboard */,
 				B245430524B1326F0015E403 /* Assets.xcassets */,
@@ -97,6 +103,17 @@
 				B245431524B1326F0015E403 /* Info.plist */,
 			);
 			path = Top100AlbumsTests;
+			sourceTree = "<group>";
+		};
+		B245431E24B134170015E403 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B245431F24B134270015E403 /* Album.swift */,
+				B245432124B134AC0015E403 /* Genre.swift */,
+				B245432324B135050015E403 /* Feed.swift */,
+				B245432524B135A10015E403 /* Author.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,9 +217,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B245432624B135A10015E403 /* Author.swift in Sources */,
 				B245430124B132670015E403 /* ViewController.swift in Sources */,
+				B245432424B135050015E403 /* Feed.swift in Sources */,
 				B24542FD24B132670015E403 /* AppDelegate.swift in Sources */,
-				B24542FF24B132670015E403 /* SceneDelegate.swift in Sources */,
+				B245432024B134270015E403 /* Album.swift in Sources */,
+				B245432224B134AC0015E403 /* Genre.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
