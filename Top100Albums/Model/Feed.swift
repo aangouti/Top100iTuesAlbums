@@ -17,4 +17,17 @@ struct Feed: Codable {
     let country: String?
     let icon: String?
     let updated: String?
+    let albums: [Album]?
+    
+    enum CodingKeys: String, CodingKey {
+        case title
+        case id
+        case author
+        case links
+        case copyRight
+        case country
+        case icon
+        case updated
+        case albums = "results"
+    }
 }
