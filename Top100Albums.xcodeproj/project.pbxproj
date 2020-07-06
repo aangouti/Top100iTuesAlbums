@@ -21,6 +21,8 @@
 		B245433024B179EF0015E403 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B245432F24B179EF0015E403 /* DataSource.swift */; };
 		B245433224B17A280015E403 /* TopAlbumsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B245433124B17A280015E403 /* TopAlbumsViewModel.swift */; };
 		B245433424B17BD10015E403 /* DynamicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B245433324B17BD10015E403 /* DynamicValue.swift */; };
+		B245433724B2A1BB0015E403 /* TopAlbumsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B245433624B2A1BB0015E403 /* TopAlbumsTableViewCell.swift */; };
+		B245433924B2A32A0015E403 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = B245433824B2A32A0015E403 /* ImageCache.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		B245432F24B179EF0015E403 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		B245433124B17A280015E403 /* TopAlbumsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopAlbumsViewModel.swift; sourceTree = "<group>"; };
 		B245433324B17BD10015E403 /* DynamicValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicValue.swift; sourceTree = "<group>"; };
+		B245433624B2A1BB0015E403 /* TopAlbumsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopAlbumsTableViewCell.swift; sourceTree = "<group>"; };
+		B245433824B2A32A0015E403 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,7 @@
 		B24542FB24B132670015E403 /* Top100Albums */ = {
 			isa = PBXGroup;
 			children = (
+				B245433524B246810015E403 /* View */,
 				B245432E24B179D60015E403 /* ViewModel */,
 				B245432724B1366B0015E403 /* Networking */,
 				B245431E24B134170015E403 /* Model */,
@@ -100,7 +105,6 @@
 				B245430524B1326F0015E403 /* Assets.xcassets */,
 				B245430724B1326F0015E403 /* LaunchScreen.storyboard */,
 				B245430A24B1326F0015E403 /* Info.plist */,
-				B245432C24B13EA30015E403 /* TopAlbumsTableViewController.swift */,
 			);
 			path = Top100Albums;
 			sourceTree = "<group>";
@@ -140,8 +144,18 @@
 				B245432F24B179EF0015E403 /* DataSource.swift */,
 				B245433124B17A280015E403 /* TopAlbumsViewModel.swift */,
 				B245433324B17BD10015E403 /* DynamicValue.swift */,
+				B245433824B2A32A0015E403 /* ImageCache.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B245433524B246810015E403 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B245432C24B13EA30015E403 /* TopAlbumsTableViewController.swift */,
+				B245433624B2A1BB0015E403 /* TopAlbumsTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B245432624B135A10015E403 /* Author.swift in Sources */,
+				B245433924B2A32A0015E403 /* ImageCache.swift in Sources */,
 				B245433424B17BD10015E403 /* DynamicValue.swift in Sources */,
 				B245432B24B13D6D0015E403 /* FeedRoot.swift in Sources */,
 				B245432424B135050015E403 /* Feed.swift in Sources */,
@@ -253,6 +268,7 @@
 				B245432024B134270015E403 /* Album.swift in Sources */,
 				B245433224B17A280015E403 /* TopAlbumsViewModel.swift in Sources */,
 				B245432224B134AC0015E403 /* Genre.swift in Sources */,
+				B245433724B2A1BB0015E403 /* TopAlbumsTableViewCell.swift in Sources */,
 				B245432924B1367B0015E403 /* API.swift in Sources */,
 				B245432D24B13EA30015E403 /* TopAlbumsTableViewController.swift in Sources */,
 			);

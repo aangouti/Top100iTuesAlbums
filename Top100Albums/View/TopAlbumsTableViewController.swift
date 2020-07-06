@@ -19,6 +19,7 @@ class TopAlbumsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Top Albums"
         dataSource.configure(with: tableView)
         
         dataSource.data.addAndNotify(self) { [weak self] _ in

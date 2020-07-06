@@ -14,6 +14,7 @@ enum Errors: Error {
     case invalidURL
     case noData
     case wrongHttpStatusCode
+    case wrongImageData
 }
 
 class API {
@@ -30,8 +31,8 @@ class API {
                 return
             }
             
-            guard let response = (response as? HTTPURLResponse)?.statusCode,
-                response >= 200, response < 400 else {
+            guard let statusCode = (response as? HTTPURLResponse)?.statusCode,
+            (statusCode >= 200 && statusCode < 400) else {
                     completion(.failure(Errors.wrongHttpStatusCode))
                     return
             }
