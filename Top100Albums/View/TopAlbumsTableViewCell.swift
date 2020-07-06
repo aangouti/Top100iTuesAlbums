@@ -8,6 +8,24 @@
 
 import UIKit
 
+func imageFrom(text: String?) -> UIImage? {
+    let frame = CGRect(x: 0, y: 0, width: 100, height: 100)
+    let nameLabel = UILabel(frame: frame)
+    nameLabel.textAlignment = .center
+    nameLabel.backgroundColor = .darkGray
+    nameLabel.textColor = .white
+    nameLabel.font = .boldSystemFont(ofSize: 17)
+    nameLabel.numberOfLines = 2
+    nameLabel.text = text
+    UIGraphicsBeginImageContext(frame.size)
+    if let currentContext = UIGraphicsGetCurrentContext() {
+        nameLabel.layer.render(in: currentContext)
+        let nameImage = UIGraphicsGetImageFromCurrentImageContext()
+        return nameImage
+      }
+    return nil
+}
+
 class TopAlbumsTableViewCell: UITableViewCell {
 
     var album: Album? {
@@ -21,7 +39,7 @@ class TopAlbumsTableViewCell: UITableViewCell {
                             self?.artworkImageView.image = image
                         }
                     case .failure(let error):
-                        #warning("make an image from text")
+                        self?.artworkImageView.image = imageFrom(text: "No \nArtwork")
                         print(error.localizedDescription)
                     }
                 }
@@ -42,15 +60,15 @@ class TopAlbumsTableViewCell: UITableViewCell {
 
     let artworkImageSize = CGSize(width: 100, height: 100)
     
-    let albumNamelabel : UILabel = {
+    let albumNamelabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 2
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .boldSystemFont(ofSize: 18)
+        label.font = .boldSystemFont(ofSize: 19)
         return label
     }()
     
-    let artistNamelabel : UILabel = {
+    let artistNamelabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .systemFont(ofSize: 16)
@@ -66,14 +84,8 @@ class TopAlbumsTableViewCell: UITableViewCell {
         return stackView
     }()
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style
-            , reuseIdentifier: reuseIdentifier)
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
         addUIElementsAndConstraints()
     }
     
