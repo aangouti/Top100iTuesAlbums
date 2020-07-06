@@ -23,6 +23,7 @@ class DataSource: GenericDataSource<Album>, UITableViewDataSource {
         // register table view cells here
         tableView.register(TopAlbumsTableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.estimatedRowHeight = topAlbumsTableViewCellHeight
+        tableView.rowHeight = topAlbumsTableViewCellHeight
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
