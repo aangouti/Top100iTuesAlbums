@@ -31,25 +31,7 @@ class DataSource: GenericDataSource<Album>, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TopAlbumsTableViewCell
-        let album = data.value[indexPath.row]
-        
-        cell.imageView?.image = nil
-        if let imageUrlStr = album.artworkUrl100 {
-            imageFrom(imageUrlStr) { (imageFetchResult) in
-                switch imageFetchResult {
-                case .success(let image):
-                    DispatchQueue.main.async {
-                        if let cellToUpdate = tableView.cellForRow(at: indexPath) as? TopAlbumsTableViewCell {
-                            cellToUpdate.imageView?.image = image
-                        }
-                    }
-                case .failure(let error):
-                    print(error.localizedDescription)
-                }
-            }
-        }
-        
-        cell.textLabel?.text = album.artistName ?? "No Name"
+        cell.album = data.value[indexPath.row]
         return cell
     }
 }
