@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B243045124B51444002C8134 /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = B243045024B51444002C8134 /* Appearance.swift */; };
 		B24542FD24B132670015E403 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24542FC24B132670015E403 /* AppDelegate.swift */; };
 		B245430624B1326F0015E403 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B245430524B1326F0015E403 /* Assets.xcassets */; };
 		B245430924B1326F0015E403 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B245430724B1326F0015E403 /* LaunchScreen.storyboard */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B243045024B51444002C8134 /* Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
 		B24542F924B132670015E403 /* Top100Albums.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Top100Albums.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B24542FC24B132670015E403 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B245430524B1326F0015E403 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -78,9 +80,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B243044F24B51429002C8134 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				B243045024B51444002C8134 /* Appearance.swift */,
+				B24542FC24B132670015E403 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
 		B24542F024B132670015E403 = {
 			isa = PBXGroup;
 			children = (
+				B243044F24B51429002C8134 /* Application */,
 				B24542FB24B132670015E403 /* Top100Albums */,
 				B245431224B1326F0015E403 /* Top100AlbumsTests */,
 				B24542FA24B132670015E403 /* Products */,
@@ -103,7 +115,6 @@
 				B245432E24B179D60015E403 /* ViewModel */,
 				B245432724B1366B0015E403 /* Networking */,
 				B245431E24B134170015E403 /* Model */,
-				B24542FC24B132670015E403 /* AppDelegate.swift */,
 				B245430524B1326F0015E403 /* Assets.xcassets */,
 				B245430724B1326F0015E403 /* LaunchScreen.storyboard */,
 				B245430A24B1326F0015E403 /* Info.plist */,
@@ -271,6 +282,7 @@
 				B245432024B134270015E403 /* Album.swift in Sources */,
 				B245433224B17A280015E403 /* TopAlbumsViewModel.swift in Sources */,
 				B245432224B134AC0015E403 /* Genre.swift in Sources */,
+				B243045124B51444002C8134 /* Appearance.swift in Sources */,
 				B245433724B2A1BB0015E403 /* TopAlbumsTableViewCell.swift in Sources */,
 				B245433B24B3FA810015E403 /* AlbumDetailViewController.swift in Sources */,
 				B245432924B1367B0015E403 /* API.swift in Sources */,
