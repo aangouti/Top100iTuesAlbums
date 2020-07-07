@@ -21,6 +21,7 @@ class TopAlbumsTableViewController: UITableViewController {
         super.viewDidLoad()
         title = "Top Albums"
         dataSource.configure(with: tableView)
+        dataSource.presentationBlock = presentAlbumDetailViewController
         
         dataSource.data.addAndNotify(self) { [weak self] _ in
             self?.tableView.reloadData()
@@ -43,5 +44,10 @@ class TopAlbumsTableViewController: UITableViewController {
     
     func configure() {
         
+    }
+    
+    func presentAlbumDetailViewController(album: Album) {
+        let albumDetailViewController = AlbumDetailViewController(album: album)
+        navigationController?.pushViewController(albumDetailViewController, animated: true) 
     }
 }

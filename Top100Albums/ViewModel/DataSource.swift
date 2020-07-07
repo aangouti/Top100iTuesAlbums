@@ -16,11 +16,12 @@ class GenericDataSource<T>: NSObject {
 }
 
 class DataSource: GenericDataSource<Album>, UITableViewDataSource {
+    var presentationBlock: ((Album) -> ())? = nil
+    
     func configure(with tableView: UITableView) {
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.estimatedRowHeight = topAlbumsTableViewCellHeight
-        // register table view cells here
+        
         tableView.register(TopAlbumsTableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.estimatedRowHeight = topAlbumsTableViewCellHeight
         tableView.rowHeight = topAlbumsTableViewCellHeight
@@ -46,6 +47,8 @@ extension DataSource: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView,
                    didSelectRowAt indexPath: IndexPath) {
+        let album = data.value[indexPath.row]
+        presentationBlock?(album)
     }
     
     func tableView(_ tableView: UITableView,

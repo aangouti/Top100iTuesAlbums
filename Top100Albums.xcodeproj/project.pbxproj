@@ -23,6 +23,7 @@
 		B245433424B17BD10015E403 /* DynamicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B245433324B17BD10015E403 /* DynamicValue.swift */; };
 		B245433724B2A1BB0015E403 /* TopAlbumsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B245433624B2A1BB0015E403 /* TopAlbumsTableViewCell.swift */; };
 		B245433924B2A32A0015E403 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = B245433824B2A32A0015E403 /* ImageCache.swift */; };
+		B245433B24B3FA810015E403 /* AlbumDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B245433A24B3FA810015E403 /* AlbumDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		B245433324B17BD10015E403 /* DynamicValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicValue.swift; sourceTree = "<group>"; };
 		B245433624B2A1BB0015E403 /* TopAlbumsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopAlbumsTableViewCell.swift; sourceTree = "<group>"; };
 		B245433824B2A32A0015E403 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		B245433A24B3FA810015E403 /* AlbumDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 			children = (
 				B245432C24B13EA30015E403 /* TopAlbumsTableViewController.swift */,
 				B245433624B2A1BB0015E403 /* TopAlbumsTableViewCell.swift */,
+				B245433A24B3FA810015E403 /* AlbumDetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				B245433224B17A280015E403 /* TopAlbumsViewModel.swift in Sources */,
 				B245432224B134AC0015E403 /* Genre.swift in Sources */,
 				B245433724B2A1BB0015E403 /* TopAlbumsTableViewCell.swift in Sources */,
+				B245433B24B3FA810015E403 /* AlbumDetailViewController.swift in Sources */,
 				B245432924B1367B0015E403 /* API.swift in Sources */,
 				B245432D24B13EA30015E403 /* TopAlbumsTableViewController.swift in Sources */,
 			);
